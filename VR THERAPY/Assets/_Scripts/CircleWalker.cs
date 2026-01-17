@@ -11,8 +11,8 @@ public class CircleWalker : MonoBehaviour
         float angle = Time.time * speed;
 
 
-        float x = Mathf.Cos(angle) * radius;
-        float z = Mathf.Sin(angle) * radius;
+        float x = transform.position.x + Mathf.Cos(angle) * radius;
+        float z = transform.position.z + Mathf.Sin(angle) * radius;
 
         transform.position = new Vector3(x, transform.position.y, z);
 
